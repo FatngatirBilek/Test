@@ -14,7 +14,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    openai.api_key = "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"
+    openai.api_key = "OPENAIKEY"
     response = openai.Completion.create(
         engine="text-curie-001",
         prompt= message.content,
@@ -22,4 +22,4 @@ async def on_message(message):
     response = response["choices"][0]["text"]
     await message.channel.send(response)
 
-client.run("ODk3MzQ1MTAzODcyNTQ4ODg1.GGjgjp.5G5pUSKK77_6OpeoVXNuyM6MtAX5ic8q0FTH9U")
+client.run("DiscordBotToken")
